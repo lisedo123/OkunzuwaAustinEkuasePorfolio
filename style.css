@@ -279,53 +279,6 @@ span {
 
 }
 
-.education-img {
-    position: relative;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.education-img img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: .2rem solid var(--main-color);
-    background-color: var(--bg-color);
-}
-
-.education-img .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid var(--second-bg-color);
-    border-bottom: .2rem solid var(--second-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-    animation: educationSpinner 8s linear infinite;       
-}
-
-.education-content {
-    text-align: center;
-}
-
-.education-content h3 {
-    font-size: 2.6rem;
-}
-
-.education-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-
 .btn-box.btns {
     display: inline-block;
     width: 15rem;
@@ -340,8 +293,9 @@ span {
     padding-bottom: 5rem;
 }
 
-ul {
+li {
     text-indent: 9px;
+    list-style-type: square;
 }
 
 .experience .experience-row {
@@ -420,10 +374,259 @@ ul {
  }
 
  .experience-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    padding-bottom: .3rem;
+    padding-top: .4rem;
+    padding-bottom: 1.1rem;
+
+ }
+
+ .experience-content li {
+    font-size: 1.3rem;
+    padding-bottom: 1.1rem;
+ }
+
+
+
+
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+li {
+    text-indent: 9px;
+}
+
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education-row .education-column {
+    flex: 1 1 24rem;    
+}
+
+.education-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education-column .education-box {
+    border-left: .2rem solid var(--main-color);
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.education-content .content {
+   position: relative;
+   padding: 2rem;
+   border: .2rem solid var(--main-color) ;
+   border-radius: .6rem;
+   margin-bottom: 2.5rem;
+   overflow: hidden;
+}
+
+.education-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    z-index: -1;
+    transition: .7s;
+}
+
+.education-content .content:hover::before {
+    width: 100%;
+}
+
+.education-content .content .edu {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    padding-bottom: 1rem;
+ }
+
+ .education-content .content .edu {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    padding-bottom: 1rem;
+ }
+
+ .education-content .content .edu i {
+    padding-right: .5rem;
+ }
+
+ .education-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+ }
+
+ .education-content span {
+    font-weight: 600;
+
+ }
+
+ .education-content p {
+    font-size: 1.3rem;
     padding-bottom: .3rem;
     padding-top: .4rem;
  }
+
+
+
+
+
+.prfessionalsection .one  {
+    height: 6px;
+}
+
+ .prfessionalsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+li {
+    text-indent: 9px;
+}
+
+.prfessionalsection .prfessionalsection-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.prfessionalsection-row .prfessionalsection-column {
+    flex: 1 1 24rem;    
+}
+
+.prfessionalsection-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.prfessionalsection-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.prfessionalsection-column .prfessionalsection-box {
+    border-left: .2rem solid var(--main-color);
+}
+
+.prfessionalsection-box .prfessionalsection-content {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.prfessionalsection-box .prfessionalsection-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.prfessionalsection-content .content {
+   position: relative;
+   padding: 2rem;
+   border: .2rem solid var(--main-color);
+   border-radius: .6rem;
+   margin-bottom: 2.5rem;
+   overflow: hidden;
+}
+
+.prfessionalsection-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .7s;
+}
+
+.prfessionalsection-content .content:hover::before {
+    width: 100%;
+}
+
+.prfessionalsection-content .content .exp {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    padding-bottom: 1rem;
+ }
+
+ .prfessionalsection-content .content .exp {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    padding-bottom: 1rem;
+ }
+
+ .prfessionalsection-content .content .exp i {
+    padding-right: .5rem;
+ }
+
+ .prfessionalsection-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+ }
+
+ .prfessionalsection-content span {
+    font-weight: 600;
+
+ }
+
+ .prfessionalsection-content li {
+    font-size: 1.4rem;
+    padding-bottom: .3rem;
+    padding-top: .4rem;
+ }
+
+
+
+
+
+
+
+
 
  .skills {
     min-height: auto;
@@ -532,6 +735,7 @@ ul {
     .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
         width: 50%;
     }
+
 
  .contact {
     min-height: auto;
@@ -658,6 +862,11 @@ ul {
  .footer-iconTop a:hover i {
     color: var(--main-color);
  }
+
+.two {
+    background: var(--second-bg-color);
+    height: 30px;
+}
 
  /* BREAKPOINTS */
  @media (max-width: 1200px) {
@@ -842,11 +1051,5 @@ ul {
     65%,
     85% {
         background-position: 0 0;
-    }
- }
-
- @keyframes educationSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
     }
  }
