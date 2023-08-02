@@ -15,7 +15,7 @@
 
     <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">Lilipod.</a>
+        <a href="#" class="logo">Austin.</a>
 
         <div class="bx bx-menu" id="menu-icon"></div>
 
@@ -46,7 +46,7 @@
             </p>
 
             <div class="btn-box">
-                <a href="https://tinyurl.com/f497durw" class="btn">Downdload CV</a>
+                <a href="https://bit.ly/3DA7UJG" target="_blank" class="btn">Downdload CV</a>
                 <a href="#" class="btn">Let's Talk</a>
             </div>
         </div>
@@ -567,31 +567,31 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form onclick="sendEmail(); reset(); return false;" action="#">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" id="name" placeholder="Full Name" >
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="email" placeholder="Email Address" required>
+                    <input type="email" id="email" placeholder="Email Address" >
                     <span class="focus"></span>
                 </div>
             </div>    
 
             <div class="input-box">
                     <div class="input-field">
-                        <input type="number" placeholder="Mobile Number" required>
+                        <input type="number" id="phone" placeholder="Mobile Number" >
                         <span class="focus"></span>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Email Subject" required>
+                        <input type="text" placeholder="Email Subject" >
                         <span class="focus"></span>
                     </div>
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" ></textarea>
                 <span class="focus"></span>
             </div>
 
@@ -614,8 +614,24 @@
         </div>
     </footer>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "lisedo147@gmail.com",
+                Password : "addymay1-2",
+                To : 'lisedo147@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact From Enquiry",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+        }
+    </script>
+
     <script src="script.js"></script>
-
-
 </body>
 </html>
